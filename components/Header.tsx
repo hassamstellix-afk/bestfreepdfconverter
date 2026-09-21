@@ -4,11 +4,11 @@ import { SITE } from "@/lib/site";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-[rgba(255,255,255,0.18)] bg-[var(--brand)] text-white shadow-[0_10px_28px_rgba(169,15,22,0.18)]">
+    <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-white text-[var(--ink)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6">
         <Link href="/" className="group flex min-w-0 flex-col">
           <span className="flex min-w-0 items-center gap-2.5">
-            <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white p-1.5 shadow-sm">
+            <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white">
               <Image
                 src="/logo.svg"
                 alt=""
@@ -16,35 +16,47 @@ export function Header() {
                 height={32}
                 priority
                 unoptimized
-                className="h-8 w-8 object-contain bg-white"
+                className="h-8 w-8 object-contain"
               />
             </span>
             <span className="min-w-0 truncate font-display text-base font-bold sm:text-xl">
               {SITE.name}
             </span>
           </span>
-          <span className="truncate text-xs text-white/82 group-hover:text-white">
+          <span className="truncate text-xs text-[var(--ink-muted)] group-hover:text-[var(--brand)]">
             Private · client-side PDF tools
           </span>
         </Link>
-        <nav className="flex w-full items-center justify-between rounded-xl bg-white/10 p-1 text-sm sm:w-auto sm:justify-end sm:bg-transparent sm:p-0">
+        <nav className="grid w-full grid-cols-3 gap-1 rounded-lg bg-[var(--bg-a)] p-1 text-center text-sm min-[440px]:grid-cols-5 sm:flex sm:w-auto sm:justify-end sm:bg-transparent sm:p-0">
           <Link
             href="/#tools"
-            className="min-h-10 rounded-lg px-3 py-2 text-white/86 transition hover:bg-white/14 hover:text-white"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
           >
             Tools
           </Link>
           <Link
             href="/about"
-            className="min-h-10 rounded-lg px-3 py-2 text-white/86 transition hover:bg-white/14 hover:text-white"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
           >
             About
           </Link>
           <Link
+            href="/blog"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
+          >
+            Blog
+          </Link>
+          <Link
             href="/privacy"
-            className="min-h-10 rounded-lg px-3 py-2 text-white/86 transition hover:bg-white/14 hover:text-white"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
           >
             Privacy
+          </Link>
+          <Link
+            href="/contact"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
+          >
+            Contact
           </Link>
         </nav>
       </div>

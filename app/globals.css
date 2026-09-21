@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #241112;
-  --ink-muted: #704042;
-  --brand: #d71920;
-  --brand-deep: #a90f16;
-  --brand-soft: #ffe8ea;
-  --surface: rgba(255, 255, 255, 0.88);
+  --ink: #33333b;
+  --ink-muted: #707078;
+  --brand: #e5322d;
+  --brand-deep: #c82420;
+  --brand-soft: #fff0f0;
+  --surface: #ffffff;
   --surface-solid: #ffffff;
-  --line: rgba(169, 15, 22, 0.14);
-  --bg-a: #fff1f2;
+  --line: #e7e7ee;
+  --bg-a: #f7f7fb;
   --bg-b: #ffffff;
-  --bg-c: #ffe5e7;
-  --danger: #b00020;
-  --success: #d71920;
-  --shadow: 0 18px 50px rgba(169, 15, 22, 0.09);
-  --radius: 18px;
+  --bg-c: #f5f5fa;
+  --danger: #e5322d;
+  --success: #2f9e62;
+  --shadow: 0 5px 30px rgba(22, 22, 22, 0.1);
+  --radius: 8px;
   --font-display: var(--font-outfit), "Segoe UI", sans-serif;
   --font-body: var(--font-source-sans), "Segoe UI", sans-serif;
 }
@@ -46,11 +46,7 @@ body {
   overflow-x: hidden;
   color: var(--ink);
   font-family: var(--font-body);
-  background:
-    radial-gradient(1200px 600px at 10% -10%, var(--bg-a), transparent 55%),
-    radial-gradient(900px 500px at 90% 0%, var(--bg-c), transparent 50%),
-    linear-gradient(180deg, var(--bg-b), #ffffff 42%, #fff6f7);
-  background-attachment: fixed;
+  background: var(--bg-a);
 }
 
 a {
@@ -69,7 +65,6 @@ a {
 
 .surface {
   background: var(--surface);
-  backdrop-filter: blur(10px);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
@@ -81,8 +76,8 @@ a {
   justify-content: center;
   gap: 0.5rem;
   min-height: 44px;
-  border-radius: 12px;
-  padding: 0.75rem 1.15rem;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
   font-weight: 600;
   transition:
     transform 160ms ease,
@@ -104,7 +99,7 @@ a {
 .btn-primary {
   background: var(--brand);
   color: white;
-  box-shadow: 0 10px 24px rgba(215, 25, 32, 0.26);
+  box-shadow: none;
 }
 
 .btn-primary:hover:not(:disabled) {
@@ -114,7 +109,7 @@ a {
 .btn-secondary {
   background: white;
   color: var(--brand-deep);
-  border: 1px solid rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
 }
 
 .btn-secondary:hover:not(:disabled) {
@@ -122,8 +117,8 @@ a {
 }
 
 .dropzone {
-  border: 2px dashed rgba(215, 25, 32, 0.36);
-  background: rgba(255, 255, 255, 0.78);
+  border: 2px dashed rgba(229, 50, 45, 0.32);
+  background: #ffffff;
   border-radius: var(--radius);
   transition:
     border-color 180ms ease,
@@ -139,7 +134,7 @@ svg {
 .dropzone[data-active="true"] {
   border-color: var(--brand);
   background: var(--brand-soft);
-  transform: scale(1.01);
+  transform: translateY(-1px);
 }
 
 @keyframes fade-up {

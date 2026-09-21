@@ -1,102 +1,127 @@
 import Link from "next/link";
-import { SITE } from "@/lib/site";
-import { tools, CATEGORY_LABELS, type ToolCategory } from "@/lib/tools";
-import { PrivacyCallout } from "@/components/PrivacyCallout";
-import { ToolIcon } from "@/components/ToolIcon";
+import Image from "next/image";
+import { HomeToolsFilter } from "@/components/HomeToolsFilter";
 
-const categoryOrder: ToolCategory[] = [
-  "convert",
-  "organize",
-  "optimize",
-  "edit",
-  "secure",
+const workflowCards = [
+  {
+    title: "Private by design",
+    text: "Use everyday PDF tools in your browser without sending core files to an upload server.",
+    image: "/assets/free/local-workflow.svg",
+  },
+  {
+    title: "Made for every screen",
+    text: "Convert, compress, sign, and organize files from phones, tablets, laptops, and desktops.",
+    image: "/assets/free/mobile-tools.svg",
+  },
+  {
+    title: "Clear document workflows",
+    text: "Each tool has one focused job, clear steps, and honest notes about best-use cases.",
+    image: "/assets/free/team-documents.svg",
+  },
 ];
 
 export default function HomePage() {
   return (
     <div>
-      <section className="relative overflow-hidden bg-[var(--brand)] text-white">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-100"
-          style={{
-            backgroundImage:
-              "linear-gradient(135deg, rgba(169,15,22,0.78), rgba(215,25,32,0.2) 45%, rgba(255,255,255,0.08)), radial-gradient(circle at 85% 15%, rgba(255,255,255,0.24), transparent 34%)",
-          }}
-        />
-        <div className="relative mx-auto flex min-h-[62svh] max-w-6xl flex-col justify-center px-4 py-14 sm:min-h-[72vh] sm:px-6 sm:py-24">
-          <p className="animate-fade-up font-display text-sm font-semibold tracking-wide text-white/82">
-            {SITE.domain}
-          </p>
-          <h1 className="animate-fade-up font-display mt-3 max-w-4xl text-[clamp(2.65rem,13vw,4.5rem)] font-bold leading-[1.04] text-white sm:text-6xl md:text-7xl">
-            best free pdf converter
+      <section className="bg-[var(--bg-a)] px-4 py-10 sm:px-6 sm:py-14">
+        <div className="mx-auto max-w-5xl text-center">
+          <h1 className="font-display text-[clamp(2rem,7vw,3.25rem)] font-semibold leading-tight text-[var(--ink)]">
+            Fast, private PDF tools for everyday document work
           </h1>
-          <p className="animate-fade-up-delay mt-5 max-w-xl text-base leading-relaxed text-white/86 sm:text-xl">
-            {SITE.tagline}
+          <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg">
+            Convert, compress, merge, split, sign, unlock, and edit PDFs with
+            focused browser-based tools. No account required for core tasks.
           </p>
-          <div className="animate-fade-up-delay mt-8 grid gap-3 sm:flex sm:flex-wrap">
-            <a href="#tools" className="btn btn-primary w-full sm:w-auto">
-              Browse tools
-            </a>
-            <Link href="/privacy" className="btn btn-secondary w-full sm:w-auto">
-              Why it&apos;s private
-            </Link>
+
+          <Link href="#tools" className="btn btn-primary mt-6">
+            Start with a tool
+          </Link>
+        </div>
+      </section>
+
+      <HomeToolsFilter />
+
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-center font-display text-3xl font-semibold text-[var(--ink)]">
+            Work your way
+          </h2>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {workflowCards.map((card) => (
+              <article
+                key={card.title}
+                className="overflow-hidden rounded-lg border border-[var(--line)] bg-white shadow-[0_5px_30px_rgba(22,22,22,0.08)]"
+              >
+                <div className="relative h-44 bg-[var(--brand-soft)] sm:h-48">
+                  <Image
+                    src={card.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display text-lg font-semibold">
+                    {card.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--ink-muted)]">
+                    {card.text}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section
-        id="tools"
-        className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20"
-        aria-labelledby="tools-heading"
-      >
-        <PrivacyCallout className="mb-10" />
-        <h2
-          id="tools-heading"
-          className="font-display text-2xl font-bold sm:text-3xl"
-        >
-          All tools
-        </h2>
-        <p className="mt-2 max-w-[65ch] text-[var(--ink-muted)]">
-          Fourteen free utilities with dedicated SEO pages. Pick a tool — heavy
-          PDF libraries load only after you choose a file.
-        </p>
+      <section className="px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-5xl overflow-hidden rounded-lg bg-[#fff2f2] md:grid-cols-[1.1fr_0.9fr]">
+          <div className="p-8 sm:p-12">
+            <h2 className="font-display text-3xl font-semibold text-[var(--ink)]">
+              Finish PDF tasks with less friction
+            </h2>
+            <ul className="mt-6 space-y-3 text-sm text-[var(--ink-muted)]">
+              <li>Focused tools for conversion, organization, signing, and security</li>
+              <li>Helpful guides that explain how each tool works and when to use it</li>
+              <li>Local browser processing for core workflows whenever possible</li>
+            </ul>
+            <a href="#tools" className="btn btn-primary mt-8">
+              Start with a tool
+            </a>
+          </div>
+          <div className="relative min-h-80 bg-[#ffd9dc]">
+            <Image
+              src="/assets/free/speed-privacy.svg"
+              alt=""
+              fill
+              sizes="(min-width: 768px) 45vw, 100vw"
+              className="object-cover object-top"
+            />
+          </div>
+        </div>
+      </section>
 
-        <div className="mt-8 space-y-10 sm:mt-10 sm:space-y-12">
-          {categoryOrder.map((category) => {
-            const group = tools.filter((t) => t.category === category);
-            return (
-              <div key={category}>
-                <h3 className="font-display text-lg font-semibold text-[var(--brand-deep)]">
-                  {CATEGORY_LABELS[category]}
-                </h3>
-                <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {group.map((tool, index) => (
-                    <li
-                      key={tool.id}
-                      className="tool-grid-item"
-                      style={{ animationDelay: `${index * 40}ms` }}
-                    >
-                      <Link
-                        href={tool.href}
-                        className="group flex h-full items-start gap-4 rounded-xl border border-[var(--line)] bg-white/80 px-4 py-4 transition hover:-translate-y-0.5 hover:border-[var(--brand)] hover:shadow-[var(--shadow)] sm:px-5"
-                      >
-                        <ToolIcon id={tool.id} />
-                        <span className="min-w-0">
-                          <span className="font-display block text-base font-semibold group-hover:text-[var(--brand)] sm:text-lg">
-                            {tool.name}
-                          </span>
-                          <span className="mt-1 block text-sm leading-relaxed text-[var(--ink-muted)]">
-                            {tool.summary}
-                          </span>
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+      <section className="bg-white px-4 py-16 text-center sm:px-6">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-display text-3xl font-semibold text-[var(--ink)]">
+            Trusted utilities for everyday documents
+          </h2>
+          <p className="mt-3 text-[var(--ink-muted)]">
+            A focused toolkit for people who need quick PDF results without
+            sending private files to a server.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3 text-xs font-semibold uppercase tracking-wide text-[var(--ink-muted)]">
+            <span className="rounded-full border border-[var(--line)] px-4 py-2">
+              Local processing
+            </span>
+            <span className="rounded-full border border-[var(--line)] px-4 py-2">
+              Browser tools
+            </span>
+            <span className="rounded-full border border-[var(--line)] px-4 py-2">
+              No core upload
+            </span>
+          </div>
         </div>
       </section>
     </div>

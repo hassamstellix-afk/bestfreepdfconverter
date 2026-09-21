@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import type { ToolId } from "@/lib/tools";
 
-const iconClass = "h-7 w-7";
+const iconClass = "h-6 w-6";
 
 function Svg({ children }: { children: ReactNode }) {
   return (
@@ -118,10 +118,28 @@ const icons: Record<ToolId, ReactNode> = {
   ),
 };
 
+const iconColors: Record<ToolId, string> = {
+  "pdf-to-word": "#4f7bd9",
+  "word-to-pdf": "#4f7bd9",
+  "merge-pdf": "#f2614b",
+  "split-pdf": "#f2614b",
+  "compress-pdf": "#78b957",
+  "pdf-to-jpg": "#f0c33c",
+  "jpg-to-pdf": "#f0c33c",
+  "edit-pdf": "#b45aa0",
+  "pdf-password-remover": "#4d78a8",
+  "sign-pdf": "#4d78a8",
+  "excel-to-pdf": "#58a55c",
+  "pdf-to-excel": "#58a55c",
+  "rotate-pdf": "#b45aa0",
+  "unlock-pdf": "#4d78a8",
+};
+
 export function ToolIcon({ id }: { id: ToolId }) {
   return (
     <span
-      className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[var(--brand-soft)] text-[var(--brand-deep)]"
+      className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-white"
+      style={{ backgroundColor: iconColors[id] }}
       aria-hidden="true"
     >
       {icons[id]}

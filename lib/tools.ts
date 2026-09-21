@@ -468,7 +468,7 @@ export const tools: ToolDefinition[] = [
     description:
       "Convert Excel (.xlsx) sheets to PDF in your browser. Tabular data is laid out for reading and sharing — best-effort client-side conversion.",
     h1: "Excel to PDF Converter",
-    title: "Excel to PDF Converter Free Online | best freepdfconverter",
+    title: "Excel to PDF Converter Free Online | best free pdf converter",
     metaDescription:
       "Convert Excel to PDF free online. Turn .xlsx spreadsheets into PDF in your browser with no uploads.",
     howTo: [

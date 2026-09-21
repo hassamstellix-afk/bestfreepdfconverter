@@ -11,38 +11,54 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-      <h1 className="font-display text-4xl font-bold tracking-tight">
-        About {SITE.name}
-      </h1>
-      <p className="mt-4 text-lg leading-relaxed text-[var(--ink-muted)]">
-        {SITE.name} is an all-in-one hub of free PDF utilities for{" "}
-        <strong className="text-[var(--ink)]">{SITE.domain}</strong>. Every core
-        tool runs in your browser so documents stay on your device.
-      </p>
-
-      <div className="mt-8 space-y-6 leading-relaxed">
-        <h2 className="font-display text-2xl font-bold">What we offer</h2>
-        <p>
-          Merge, split, compress, rotate, convert (Word, Excel, JPG), edit
-          overlays, sign, and unlock PDFs when you know the password. Each tool
-          has its own page for clear guidance and SEO — not a single opaque SPA
-          route.
+    <div className="bg-[var(--bg-a)] px-4 py-12 sm:px-6 sm:py-16">
+      <article className="mx-auto max-w-4xl rounded-lg border border-[var(--line)] bg-white p-6 shadow-[0_2px_12px_rgba(22,22,22,0.05)] sm:p-10">
+        <p className="text-sm font-semibold uppercase tracking-wide text-[var(--brand)]">
+          About us
+        </p>
+        <h1 className="mt-2 font-display text-[clamp(2rem,6vw,3.75rem)] font-semibold leading-tight text-[var(--ink)]">
+          Free PDF tools that respect your files
+        </h1>
+        <p className="mt-4 text-lg leading-relaxed text-[var(--ink-muted)]">
+          {SITE.name} is an all-in-one hub of free PDF utilities for{" "}
+          <strong className="text-[var(--ink)]">{SITE.domain}</strong>. Core
+          tools run in your browser so documents stay on your device.
         </p>
 
-        <h2 className="font-display text-2xl font-bold">Honest scope</h2>
-        <p>
-          Browser-only processing means working free tools, not Adobe-level
-          fidelity. We avoid deceptive “perfect conversion” claims and document
-          limitations such as no OCR for scanned PDFs and no password cracking.
-        </p>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {[
+            ["Convert", "PDF, Word, Excel, JPG, and everyday document formats."],
+            ["Organize", "Merge, split, rotate, compress, and prepare clean files."],
+            ["Protect", "Unlock known-password PDFs and sign documents locally."],
+          ].map(([title, text]) => (
+            <section
+              key={title}
+              className="rounded-lg border border-[var(--line)] bg-[var(--bg-a)] p-4"
+            >
+              <h2 className="font-display text-lg font-semibold">{title}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--ink-muted)]">
+                {text}
+              </p>
+            </section>
+          ))}
+        </div>
 
-        <p>
-          <Link href="/#tools" className="btn btn-primary inline-flex">
-            Explore tools
-          </Link>
-        </p>
-      </div>
-    </article>
+        <div className="mt-8 space-y-6 leading-relaxed">
+          <h2 className="font-display text-2xl font-semibold">Honest scope</h2>
+          <p>
+            Browser-only processing means useful free tools, not desktop-suite
+            fidelity. We avoid deceptive perfect-conversion claims and document
+            limitations such as no OCR for scanned PDFs and no password
+            cracking.
+          </p>
+
+          <p>
+            <Link href="/#tools" className="btn btn-primary inline-flex">
+              Explore tools
+            </Link>
+          </p>
+        </div>
+      </article>
+    </div>
   );
 }
