@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="bg-[var(--bg-a)] px-4 py-12 sm:px-6 sm:py-16">
-      <article className="mx-auto max-w-4xl rounded-lg border border-[var(--line)] bg-white p-6 shadow-[0_2px_12px_rgba(22,22,22,0.05)] sm:p-10">
+    <div className="bg-[var(--bg-a)] py-12 sm:py-16">
+      <article className="site-container rounded-lg border border-[var(--line)] bg-white py-6 shadow-[0_2px_12px_rgba(22,22,22,0.05)] sm:py-10">
         <p className="text-sm font-semibold uppercase tracking-wide text-[var(--brand)]">
           Privacy
         </p>

@@ -16,8 +16,8 @@ export default function BlogPage() {
 
   return (
     <div className="bg-[var(--bg-a)]">
-      <section className="px-4 py-10 sm:px-6 sm:py-14">
-        <div className="mx-auto max-w-5xl text-center">
+      <section className="py-10 sm:py-14">
+        <div className="site-container text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-[var(--brand)]">
             PDF tool guides
           </p>
@@ -31,7 +31,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+      <section className="site-container pb-16">
         <Link
           href={featured.href}
           className="group grid overflow-hidden rounded-lg border border-[var(--line)] bg-white shadow-[0_2px_12px_rgba(22,22,22,0.06)] transition hover:-translate-y-0.5 hover:border-[rgba(229,50,45,0.36)] hover:shadow-[var(--shadow)] md:grid-cols-[1.08fr_0.92fr]"

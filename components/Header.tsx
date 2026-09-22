@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-white text-[var(--ink)]">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6">
+      <div className="site-container flex flex-col gap-3 py-3 md:flex-row md:items-center md:justify-between md:gap-4">
         <Link href="/" className="group flex min-w-0 flex-col">
           <span className="flex min-w-0 items-center gap-2.5">
             <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white">
@@ -27,34 +27,34 @@ export function Header() {
             Private · client-side PDF tools
           </span>
         </Link>
-        <nav className="grid w-full grid-cols-3 gap-1 rounded-lg bg-[var(--bg-a)] p-1 text-center text-sm min-[440px]:grid-cols-5 sm:flex sm:w-auto sm:justify-end sm:bg-transparent sm:p-0">
+        <nav className="grid w-full grid-cols-3 gap-1 rounded-lg bg-[var(--bg-a)] p-1 text-center text-sm min-[440px]:grid-cols-5 md:flex md:w-auto md:min-w-0 md:flex-wrap md:justify-end md:bg-transparent md:p-0">
           <Link
             href="/#tools"
-            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] md:px-3"
           >
             Tools
           </Link>
           <Link
             href="/about"
-            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] md:px-3"
           >
             About
           </Link>
           <Link
             href="/blog"
-            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] md:px-3"
           >
             Blog
           </Link>
           <Link
             href="/privacy"
-            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] md:px-3"
           >
             Privacy
           </Link>
           <Link
             href="/contact"
-            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] sm:px-3"
+            className="min-h-10 rounded-lg px-2 py-2 text-[var(--ink-muted)] transition hover:bg-[var(--brand-soft)] hover:text-[var(--brand)] md:px-3"
           >
             Contact
           </Link>

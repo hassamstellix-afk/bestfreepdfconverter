@@ -5,7 +5,7 @@ import { tools } from "@/lib/tools";
 export function Footer() {
   return (
     <footer className="mt-auto bg-[#2b2b33] text-white">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="site-container grid gap-8 py-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <p className="font-display text-lg font-bold">{SITE.name}</p>
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/68">

@@ -23,8 +23,8 @@ const workflowCards = [
 export default function HomePage() {
   return (
     <div>
-      <section className="bg-[var(--bg-a)] px-4 py-10 sm:px-6 sm:py-14">
-        <div className="mx-auto max-w-5xl text-center">
+      <section className="bg-[var(--bg-a)] py-10 sm:py-14">
+        <div className="site-container text-center">
           <h1 className="font-display text-[clamp(2rem,7vw,3.25rem)] font-semibold leading-tight text-[var(--ink)]">
             Fast, private PDF tools for everyday document work
           </h1>
@@ -41,8 +41,8 @@ export default function HomePage() {
 
       <HomeToolsFilter />
 
-      <section className="bg-white px-4 py-16 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-5xl">
+      <section className="bg-white py-16 sm:py-20">
+        <div className="site-container">
           <h2 className="text-center font-display text-3xl font-semibold text-[var(--ink)]">
             Work your way
           </h2>
@@ -75,35 +75,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-5xl overflow-hidden rounded-lg bg-[#fff2f2] md:grid-cols-[1.1fr_0.9fr]">
-          <div className="p-8 sm:p-12">
-            <h2 className="font-display text-3xl font-semibold text-[var(--ink)]">
-              Finish PDF tasks with less friction
-            </h2>
-            <ul className="mt-6 space-y-3 text-sm text-[var(--ink-muted)]">
-              <li>Focused tools for conversion, organization, signing, and security</li>
-              <li>Helpful guides that explain how each tool works and when to use it</li>
-              <li>Local browser processing for core workflows whenever possible</li>
-            </ul>
-            <a href="#tools" className="btn btn-primary mt-8">
-              Start with a tool
-            </a>
-          </div>
-          <div className="relative min-h-80 bg-[#ffd9dc]">
-            <Image
-              src="/assets/free/speed-privacy.svg"
-              alt=""
-              fill
-              sizes="(min-width: 768px) 45vw, 100vw"
-              className="object-cover object-top"
-            />
+      <section className="py-14 sm:py-20">
+        <div className="site-container">
+          <div className="grid overflow-hidden rounded-lg bg-[#fff2f2] md:grid-cols-[1.1fr_0.9fr]">
+            <div className="p-8 sm:p-12">
+              <h2 className="font-display text-3xl font-semibold text-[var(--ink)]">
+                Finish PDF tasks with less friction
+              </h2>
+              <ul className="mt-6 space-y-3 text-sm text-[var(--ink-muted)]">
+                <li>Focused tools for conversion, organization, signing, and security</li>
+                <li>Helpful guides that explain how each tool works and when to use it</li>
+                <li>Local browser processing for core workflows whenever possible</li>
+              </ul>
+              <a href="#tools" className="btn btn-primary mt-8">
+                Start with a tool
+              </a>
+            </div>
+            <div className="relative min-h-80 bg-[#ffd9dc]">
+              <Image
+                src="/assets/free/speed-privacy.svg"
+                alt=""
+                fill
+                sizes="(min-width: 768px) 45vw, 100vw"
+                className="object-cover object-top"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-4 py-16 text-center sm:px-6">
-        <div className="mx-auto max-w-3xl">
+      <section className="bg-white py-16 text-center">
+        <div className="site-container text-center">
           <h2 className="font-display text-3xl font-semibold text-[var(--ink)]">
             Trusted utilities for everyday documents
           </h2>

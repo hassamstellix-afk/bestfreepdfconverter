@@ -37,7 +37,7 @@ export function HomeToolsFilter() {
   return (
     <section
       id="tools"
-      className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8"
+      className="site-container pb-14"
       aria-labelledby="tools-heading"
     >
       <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

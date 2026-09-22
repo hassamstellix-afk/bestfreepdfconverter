@@ -13,8 +13,8 @@ export default function ContactPage() {
   const email = `support@${SITE.domain}`;
 
   return (
-    <div className="bg-[var(--bg-a)] px-4 py-12 sm:px-6 sm:py-16">
-      <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+    <div className="bg-[var(--bg-a)] py-12 sm:py-16">
+      <div className="site-container grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
         <section className="rounded-lg border border-[var(--line)] bg-white p-6 shadow-[0_2px_12px_rgba(22,22,22,0.05)] sm:p-8">
           <p className="text-sm font-semibold uppercase tracking-wide text-[var(--brand)]">
             Contact us

@@ -116,8 +116,8 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <header className="px-4 py-10 sm:px-6 sm:py-14">
-        <div className="mx-auto max-w-4xl">
+      <header className="py-10 sm:py-14">
+        <div className="site-container">
           <nav className="text-sm text-[var(--ink-muted)]" aria-label="Breadcrumb">
             <Link href="/blog" className="hover:text-[var(--brand)]">
               Blog
@@ -152,7 +152,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
         </div>
       </header>
 
-      <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6">
+      <div className="site-container pb-16">
         <div className="relative h-64 overflow-hidden rounded-lg border border-[var(--line)] bg-white sm:h-96">
           <Image
             src={post.image}
